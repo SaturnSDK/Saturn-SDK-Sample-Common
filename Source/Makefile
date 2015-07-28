@@ -66,10 +66,6 @@ export OBJS		:= $(CFILES:.c=.o) $(ASFILES:.s=.o)
 export CRTOBJS	:= crt0.o
 
 $(TARGET): OBJDIR TARGETDIR
-	echo $(CFILES)
-	echo $(OBJS)
-	echo $(VPATH)
-	echo $(SOURCEDIR)
 	$(MAKE) -C $(OBJDIR) -f $(SATURN_SAMPLE_COMMON)/Source/Makefile $(BUILD_TYPE)
 	# This seems a lot less elegant than I'd like
 ifeq ($(ISO),True)
