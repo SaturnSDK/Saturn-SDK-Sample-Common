@@ -65,6 +65,9 @@
 #define VDP2_TVMD	( *( volatile uint16_t * )( 0x25F80000 ) )
 #define VDP2_TVSTAT	( *( volatile uint16_t * )( 0x25F80004 ) )
 
+/* Back screen table */
+#define VDP2_BKTAU	( *( volatile uint16_t * )( VDP2_REG + 0xAC ) )
+
 /* Sprite priority */
 #define VDP2_PRISA	( *( volatile uint16_t * )( VDP2_REG + 0xF0 ) )
 #define VDP2_PRISB	( *( volatile uint16_t * )( VDP2_REG + 0xF2 ) )
