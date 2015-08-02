@@ -211,3 +211,12 @@ void DBG_Print( int p_X, int p_Y, uint8_t p_Color, char *p_pString )
 	}
 }
 
+void DBG_ClearLine( int p_Line )
+{
+	int Index;
+	for( Index = 0; Index < 40; ++Index )
+	{
+		DBG_PrintChar( Index, p_Line, 0x00, ' ' );
+	}
+}
+
