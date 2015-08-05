@@ -15,13 +15,14 @@ TARGET	:= $(SAMPLE)
 OUTFILE	= $(TARGETDIR)/$(TARGET)
 EXT		:= .elf
 
-CROSS_COMPILE=$(SATURN_ROOT)/toolchain_elf/bin/saturn-sh2-elf-
+SATURN_BIN=$(SATURN_ROOT)/toolchain/bin
+CROSS_COMPILE=$(SATURN_BIN)/saturn-sh2-elf-
 
 CC=$(CROSS_COMPILE)gcc
 AS=$(CROSS_COMPILE)as
 LD=$(CROSS_COMPILE)ld
 OBJCOPY=$(CROSS_COMPILE)objcopy
-MAKE=$(SATURN_ROOT)/toolchain/bin/saturn-make
+MAKE=$(SATURN_BIN)/saturn-make
 
 CFLAGS = -m2 -I$(SATURN_SAMPLE_COMMON)/Source/Headers -IHeaders
 
