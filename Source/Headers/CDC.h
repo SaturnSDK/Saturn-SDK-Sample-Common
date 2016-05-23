@@ -1,0 +1,37 @@
+#ifndef __SSSDK_COMMON_CDCOM_H__
+#define __SSSDK_COMMON_CDCOM_H__
+
+#include <stdint.h>
+
+#define CDC_HIRQ_CMOK	0x0001 /* Command can be issued */
+#define CDC_HIRQ_DRDY	0x0002 /* Data transfer ready */
+#define CDC_HIRQ_CSCT	0x0004 /* Sector read complete */
+#define CDC_HIRQ_BFUL	0x0008 /* Buffer full */
+
+typedef enum
+{
+	CDC_STATUS_BUSY		= 0x00,
+	CDC_STATUS_PAUSE	= 0x01,
+	CDC_STATUS_STANDBY	= 0x02,
+	CDC_STATUS_PLAY		= 0x03,
+	CDC_STATUS_SEEK		= 0x04,
+	CDC_STATUS_SCAN		= 0x05,
+	CDC_STATUS_OPEN		= 0x06,
+	CDC_STATUS_NODISC	= 0x07,
+	CDC_STATUS_RETRY	= 0x08,
+	CDC_STATUS_ERROR	= 0x09,
+	CDC_STATUS_FATAL	= 0x0A,
+	CDC_STATUS_PERIODIC	= 0x20,
+	CDC_STATUS_TRANSFER	= 0x40,
+	CDC_STATUS_WAIT		= 0x80,
+	CDC_STATUS_REJECT	= 0xFF
+}CDC_STATUS;
+
+typedef enum
+{
+	CDC_ERROR_OK		= 0,
+	CDC_ERROR_CMDBUSY	= -1
+}CDC_ERROR;
+
+#endif /* __SSSDK_COMMON_CDCOMM_H__ */
+

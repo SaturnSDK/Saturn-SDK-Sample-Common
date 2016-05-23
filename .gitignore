@@ -38,6 +38,7 @@ local.properties
 *.swp
 *.swo
 *.swn
+*.swm
 *.vim
 
 # Temporary Blender files #

@@ -24,7 +24,7 @@ LD=$(CROSS_COMPILE)ld
 OBJCOPY=$(CROSS_COMPILE)objcopy
 MAKE=$(SATURN_BIN)/saturn-make
 
-CFLAGS = -m2 -I$(SATURN_SAMPLE_COMMON)/Source/Headers -IHeaders
+CFLAGS = -m2 -I$(SATURN_SAMPLE_COMMON)/Source/Headers -I$(TOPSRC)/Headers
 
 ifeq ($(DEVCART),True)
 CFLAGS += -DBUILD_USBDEVCART
